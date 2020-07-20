@@ -44,3 +44,13 @@ body {
   font-size: $default-font-size;
   padding-right: 8rem;
 }
+
+.contact,
+.copyright {
+  color: $color-footer-yellow;
+}
+
+.contact a{
+  color: $color-footer-yellow;
+  text-decoration: none;
+}
