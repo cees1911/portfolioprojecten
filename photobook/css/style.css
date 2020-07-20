@@ -1,0 +1,139 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  box-sizing: border-box; }
+
+body {
+  font-family: "Comfortaa", cursive;
+  padding: 2.5rem; }
+
+.heading-primary {
+  color: #550000;
+  text-transform: uppercase; }
+  .heading-primary--main {
+    display: block;
+    font-size: 6rem;
+    font-weight: 40rem;
+    letter-spacing: 3rem; }
+  .heading-primary--sub {
+    display: block;
+    font-size: 1.8rem;
+    font-weight: 70rem;
+    letter-spacing: 0.95rem; }
+
+.heading-secondary {
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  display: inline-block;
+  background-image: linear-gradient(to right, #550000, #aa3939);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  letter-spacing: 0.2rem; }
+
+.heading-tertiary {
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-transform: uppercase; }
+
+.paragraph {
+  font-size: 1.6rem;
+  padding-right: 8rem; }
+
+.u-margin-bottom-small {
+  margin-bottom: 2rem; }
+
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  opacity: 0.5;
+  overflow: hidden; }
+  .bg-video__content {
+    height: 100%;
+    width: 100%;
+    object-fit: cover; }
+
+.section-introduction__grid {
+  width: 100rem;
+  margin: 1rem auto;
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 10rem 16rem;
+  background-color: rgba(255, 255, 255, 0.5); }
+  .section-introduction__grid-header {
+    grid-column: 1 / -1;
+    justify-self: center;
+    align-self: center; }
+  .section-introduction__grid-logo {
+    position: relative; }
+  .section-introduction__grid-logo1 {
+    position: absolute;
+    left: 2rem;
+    top: 1rem;
+    width: 30%; }
+  .section-introduction__grid-logo2 {
+    position: absolute;
+    right: 10rem;
+    top: 1rem;
+    width: 30%; }
+
+.section-fotoboek__grid {
+  width: 120rem;
+  margin: 1rem auto;
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.5);
+  display: grid;
+  grid-gap: 5px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-auto-rows: 120px;
+  grid-auto-flow: dense; }
+  .section-fotoboek__grid-header {
+    grid-column: 1 / -1;
+    justify-self: center;
+    align-self: center; }
+  .section-fotoboek__grid-normaal {
+    grid-column: span 1; }
+  .section-fotoboek__grid-groot {
+    grid-column: span 2;
+    grid-row: span 2; }
+  .section-fotoboek__grid-verticaal {
+    grid-row: span 2; }
+  .section-fotoboek__grid-superV {
+    grid-row: span 3; }
+  .section-fotoboek__grid-super {
+    grid-column: span 3;
+    grid-row: span 3; }
+  .section-fotoboek__grid img {
+    width: 100%;
+    height: 100%; }
+  .section-fotoboek__grid img:hover {
+    transform: scale(1.5); }
+
+.header {
+  position: relative;
+  height: 75vh; }
+  .header__text-box {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(8%, -90%); }
+
+.section-introduction {
+  background-color: #aa3939; }
+
+.section-fotoboek {
+  background-color: #aa3939; }
