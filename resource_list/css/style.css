@@ -1,0 +1,131 @@
+:root {
+  --nav-font-color: #f2f2f2e5;
+  --nav-font-type: "Sriracha", cursive;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body{
+  background-image: url(../images/moroccan.png);
+  background-size: cover;
+  margin: 0;
+  }
+
+.header {
+  position: relative;
+  height: 80vh;
+  background-image: url(../images/nasa.jpg);
+  background-size: cover;
+  background-position: top;
+}
+
+.header__textbox {
+  position: absolute;
+  top: 8%;
+  left: 8%;
+}
+
+.header__primary {
+  font-family: "Anton", sans-serif;
+  color: #ffdb00;
+  text-transform: uppercase;
+}
+
+.heading-primary--main {
+  display: block;
+  font-size: 8rem;
+  letter-spacing: 1rem;
+}
+
+.heading-primary--sub {
+  display: block;
+  font-size: 4.5rem;
+  letter-spacing: 1rem;
+}
+
+
+
+.maincontent {
+  margin: 5rem auto;
+  background-color: #fff;
+  border-radius: .5rem;
+  width: 80%;
+  padding: 1rem;
+}
+
+.selectButton {
+  display: inline-flexbox;
+  font-family: var(--nav-font-type);
+  font-size: 2rem;
+  justify-content: space-around;
+  text-align: center;
+  color: var(--nav-font-color);
+}
+
+
+/*h1 {
+  font-family: "Anton", sans-serif;
+  font-size: 60px;
+  color: var(--nav-font-color);
+  text-align: center;
+  justify-content: center;
+  padding: 5px 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  letter-spacing: 5px;}*/
+
+a {
+  text-decoration: none;
+}
+
+p {
+  font-family: var(--nav-font-type);
+  text-align: center;
+  padding: 1rem .5remx;
+  font-size: 2rem;
+}
+
+ul {
+  list-style-type: none;
+  font-size: 2rem;
+}
+
+.wrapper {
+  text-align: center;
+}
+
+.info {
+  margin: 0 auto;
+}
+
+.logodisplay {
+  display: inline-block;
+  margin-top: 1rem;
+  background-color: #fff;
+  border-radius: .5rem;
+  box-shadow: 0 2px 10px rgba(84, 192, 241, 0.9);
+  width: 30rem;
+  padding: 1rem;
+}
+
+.logoImage {
+  border-style: none;
+}
+
+.infodisplay {
+  display: inline-block;
+  text-align: left;
+  margin-top: 10px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(84, 192, 241, 0.9);
+  width: 300px;
+  padding: 10px;
+  font-family: var(--nav-font-type);
+}
