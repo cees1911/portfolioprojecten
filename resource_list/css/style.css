@@ -65,6 +65,11 @@ body {
   justify-content: space-around;
   text-align: center;
   color: var(--nav-font-color);
+  cursor: pointer;
+}
+
+.selectButton__input {
+  cursor: pointer;
 }
 
 /*h1 {
