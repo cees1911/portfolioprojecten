@@ -1,62 +1,64 @@
-const fs = require('fs');
+const Resource = require('./../models/resourceModel');
 
-const resources = JSON.parse(
-  fs.readFileSync(`${__dirname}/../data/resources.json`)
-);
+// const resources = JSON.parse(
+//   fs.readFileSync(`${__dirname}/../data/resources.json`)
+// );
+// code als je gebruik wil maken van een file inplaats van de DB
+// moet je wel fs require doen
 
-exports.checkID = (req, res, next, val) => {
-  console.log(`resource id is : ${val}`)
-  if (req.params.id * 1 > resources.length) {
-    return res.status(404).json({
+exports.getAllResources = async (req, res) => {
+  try {
+    const resources = await Resource.find();
+
+    res.status(200).json({
+      status: 'sucsess',
+      results: resources.length,
+      data: {
+        resource: resources,
+      },
+    });
+  } catch (err) {
+    res.status(404).json({
       status: 'fail',
-      message: 'Invalid ID',
+      message: err,
     });
   }
-  next();
 };
 
-exports.getAllResources = (req, res) => {
-  console.log(req.requestTime);
-  res.status(200).json({
-    status: 'sucsess',
-    requestedAt: req.requestTime,
-    results: resources.length,
-    data: {
-      knowledge: resources,
-    },
-  });
+exports.getOneResource = async (req, res) => {
+  try {
+    const resource = await Resource.findById(req.params.id);
+
+    res.status(200).json({
+      status: 'sucsess',
+      data: {
+        resource: resource,
+      },
+    });
+  } catch (err) {
+    res.status(404).json({
+      status: 'fail',
+      message: err,
+    });
+  }
 };
 
-exports.getOneResource = (req, res) => {
-  const id = req.params.id * 1;
+exports.createResource = async (req, res) => {
+  try {
+    const newResource = await Resource.create(req.body);
 
-  const resource = resources.find((el) => el.id === id);
-
-  res.status(200).json({
-    status: 'sucsess',
-    data: {
-      knowledge: resource,
-    },
-  });
-};
-
-exports.createResource = (req, res) => {
-  const newId = resources[resources.length - 1].id + 1;
-  const newResource = Object.assign({ id: newId }, req.body);
-
-  resources.push(newResource);
-  fs.writeFile(
-    `${__dirname}/data/resources.json`,
-    JSON.stringify(resources),
-    (err) => {
-      res.status(201).json({
-        status: 'success',
-        data: {
-          knowledge: newResource,
-        },
-      });
-    }
-  );
+    res.status(201).json({
+      status: 'success',
+      data: {
+        knowledge: newResource,
+      },
+    });
+  } catch (err) {
+    res.status(400).json({
+      status: 'fail',
+      message: 'invalid data sent!',
+    });
+  }
 };
 
 exports.updateResource = (req, res) => {

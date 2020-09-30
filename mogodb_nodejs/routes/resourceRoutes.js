@@ -3,8 +3,6 @@ const resourceController = require('./../controllers/resourceController');
 
 const router = express.Router();
 
-router.param('id', resourceController.checkID)
-
 router
   .route('/')
   .get(resourceController.getAllResources)
