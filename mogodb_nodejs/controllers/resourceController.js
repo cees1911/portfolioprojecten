@@ -8,7 +8,8 @@ const Resource = require('./../models/resourceModel');
 
 exports.getAllResources = async (req, res) => {
   try {
-    const resources = await Resource.find();
+    console.log(req.query);
+    const resources = await Resource.find(req.query);
 
     res.status(200).json({
       status: 'sucsess',
@@ -61,18 +62,39 @@ exports.createResource = async (req, res) => {
   }
 };
 
-exports.updateResource = (req, res) => {
-  res.status(200).json({
-    status: 'success',
-    data: {
-      resource: '<Updated resource here>',
-    },
-  });
+exports.updateResource = async (req, res) => {
+  try {
+    const resource = await Resource.findByIdAndUpdate(req.params.id, req.body, {
+      new: true,
+      runValidators: true,
+    });
+
+    res.status(200).json({
+      status: 'success',
+      data: {
+        resource: resource,
+      },
+    });
+  } catch (err) {
+    res.status(400).json({
+      status: 'fail',
+      message: err,
+    });
+  }
 };
 
-exports.deleteResource = (req, res) => {
-  res.status(204).json({
-    status: 'success',
-    data: null,
-  });
+exports.deleteResource = async (req, res) => {
+  try {
+    await Resource.findByIdAndDelete(req.params.id);
+
+    res.status(204).json({
+      status: 'success',
+      data: null,
+    });
+  } catch (err) {
+    res.status(400).json({
+      status: 'fail',
+      message: err,
+    });
+  }
 };

@@ -8,11 +8,24 @@ const resourceSchema = new moongose.Schema({
   type: {
     type: String,
     required: [true, 'Een type moet gekozen worden'],
+    enum: {
+      values: ['website', 'video'],
+      message: 'Type kan alleen website of video zijn',
+    },
   },
   name: {
     type: String,
     required: [true, 'Een naam moet ingevuld worden'],
     unique: true,
+    trim: true,
+  },
+  summary: {
+    type: String,
+    trim: true,
+  },
+  link: {
+    type: String,
+    required: [true, 'Een link moet ingevuld worden'],
   },
 });
 

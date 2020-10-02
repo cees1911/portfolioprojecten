@@ -1,137 +1,134 @@
 [
   {
-    "id": 0,
     "onderwerp": "HTML5",
     "type": "website",
     "name": "W3Schools",
-    "link": "https://www.w3schools.com/"
+    "link": "https://www.w3schools.com/",
+    "summary": ""
   },
   {
-    "id": 1,
     "onderwerp": "React",
     "type": "video",
     "name": "React Router",
-    "link": "https://www.youtube.com/watch?v=Law7wfdg_ls"
+    "link": "https://www.youtube.com/watch?v=Law7wfdg_ls",
+    "summary": ""
   },
   {
-    "id": 2,
     "onderwerp": "Tools",
     "type": "website",
     "name": "Subtle Patterns",
-    "link": "https://www.toptal.com/designers/subtlepatterns/"
+    "link": "https://www.toptal.com/designers/subtlepatterns/",
+    "summary": ""
   },
   {
-    "id": 3,
     "onderwerp": "CSS3",
     "type": "video",
     "name": "Learn CSS Grid",
-    "link": "https://scrimba.com/course/gR8PTE"
+    "link": "https://scrimba.com/course/gR8PTE",
+    "summary": ""
   },
   {
-    "id": 4,
     "onderwerp": "CSS3",
     "type": "video",
     "name": " CSS Media Queries",
-    "link": "https://www.youtube.com/watch?v=2KL-z9A56SQ"
+    "link": "https://www.youtube.com/watch?v=2KL-z9A56SQ",
+    "summary": ""
   },
   {
-    "id": 5,
     "onderwerp": "React",
     "type": "video",
     "name": "Learn React",
-    "link": "https://scrimba.com/course/glearnreact/"
+    "link": "https://scrimba.com/course/glearnreact/",
+    "summary": ""
   },
   {
-    "id": 6,
     "onderwerp": "Javascript",
     "type": "website",
     "name": "MDN web docs",
-    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+    "summary": ""
   },
   {
-    "id": 7,
     "onderwerp": "Tools",
     "type": "website",
     "name": "Postman",
-    "link": "https://www.postman.com/"
+    "link": "https://www.postman.com/",
+    "summary": ""
   },
   {
-    "id": 8,
     "onderwerp": "Tools",
     "type": "website",
     "name": "Pexels",
     "link": "https://www.pexels.com/nl-nl/"
   },
   {
-    "id": 9,
     "onderwerp": "Tools",
     "type": "website",
     "name": "Font Awesome CDN",
-    "link": "https://www.bootstrapcdn.com/fontawesome/"
+    "link": "https://www.bootstrapcdn.com/fontawesome/",
+    "summary": ""
   },
   {
-    "id": 10,
     "onderwerp": "CSS3",
     "type": "Video",
     "name": "Input Animations With CSS",
-    "link": "https://www.youtube.com/watch?v=IxRJ8vplzAo"
+    "link": "https://www.youtube.com/watch?v=IxRJ8vplzAo",
+    "summary": ""
   },
   {
-    "id": 11,
     "onderwerp": "React",
     "type": "website",
     "name": "Victory: modular charting",
-    "link": "https://formidable.com/open-source/victory/"
+    "link": "https://formidable.com/open-source/victory/",
+    "summary": ""
   },
   {
-    "id": 12,
     "onderwerp": "CSS3",
     "type": "website",
     "name": "Clippy CSS Polygon",
-    "link": "https://bennettfeely.com/clippy/"
+    "link": "https://bennettfeely.com/clippy/",
+    "summary": ""
   },
   {
-    "id": 13,
     "onderwerp": "Tools",
     "type": "website",
     "name": "Color Picker",
-    "link": "https://imagecolorpicker.com/en/"
+    "link": "https://imagecolorpicker.com/en/",
+    "summary": ""
   },
   {
-    "id": 14,
     "onderwerp": "CSS3",
     "type": "website",
     "name": "Centering in CSS",
-    "link": "https://css-tricks.com/centering-css-complete-guide/"
+    "link": "https://css-tricks.com/centering-css-complete-guide/",
+    "summary": ""
   },
   {
-    "id": 15,
     "onderwerp": "Tools",
     "type": "website",
     "name": "The Color Scheme Designer",
-    "link": "https://paletton.com/"
+    "link": "https://paletton.com/",
+    "summary": ""
   },
   {
-    "id": 16,
     "onderwerp": "CSS3",
     "type": "website",
     "name": "Cubic-Bezier",
-    "link": "https://cubic-bezier.com/"
+    "link": "https://cubic-bezier.com/",
+    "summary": ""
   },
   {
-    "id": 17,
     "onderwerp": "Tools",
     "type": "website",
     "name": "LunaPic: photo editing",
-    "link": "https://www9.lunapic.com/editor/"
+    "link": "https://www9.lunapic.com/editor/",
+    "summary": ""
   },
   {
-    "id": 18,
     "onderwerp": "Tools",
     "type": "website",
     "name": "RoboHash",
-    "link": "https://robohash.org/"
-  },
-  { "id": 19, "onderwerp": "HTML5", "type": "website", "name": "test" },
-  { "id": 20, "onderwerp": "HTML5", "type": "website", "name": "test 2" }
+    "link": "https://robohash.org/",
+    "summary": ""
+  }
 ]
