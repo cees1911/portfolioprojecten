@@ -1,4 +1,5 @@
 const moongose = require('mongoose');
+const slugify = require('slugify');
 
 const resourceSchema = new moongose.Schema({
   onderwerp: {
@@ -19,6 +20,7 @@ const resourceSchema = new moongose.Schema({
     unique: true,
     trim: true,
   },
+  slug: String,
   summary: {
     type: String,
     trim: true,
@@ -27,6 +29,13 @@ const resourceSchema = new moongose.Schema({
     type: String,
     required: [true, 'Een link moet ingevuld worden'],
   },
+  linkText: String,
+});
+
+//document middleware: pre => runs before a save of create
+resourceSchema.pre('save', function (next) {
+  this.slug = slugify(this.name, { lower: true });
+  next();
 });
 
 const Resource = moongose.model('Resource', resourceSchema);
