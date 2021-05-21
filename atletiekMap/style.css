@@ -1,0 +1,94 @@
+:root {
+  --color-brand--1: #ffb545;
+  --color-brand--2: #00c46a;
+
+  --color-dark--1: #2d3439;
+  --color-dark--2: #42484d;
+  --color-light--1: #aaa;
+  --color-light--2: #ececec;
+  --color-light--3: rgb(214, 222, 224);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Manrope', sans-serif;
+  color: #e1e7eb;
+  font-weight: 400;
+  line-height: 1.6;
+  height: 100vh;
+  overscroll-behavior-y: none;
+  overscroll-behavior-x: none;
+
+  background-color: #fff;
+}
+
+h1 {
+  text-transform: uppercase;
+  letter-spacing: 0.75rem;
+}
+
+h2 {
+  text-transform: uppercase;
+  padding-bottom: 2rem;
+  letter-spacing: 0.3rem;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 15% auto;
+  grid-template-rows: 15% auto;
+  height: 100vh;
+}
+
+/* GENERAL */
+a:link,
+a:visited {
+  color: var(--color-brand--1);
+}
+
+.header {
+  background-color: #1e343a;
+  color: #e1e7eb;
+  text-align: center;
+  font-size: 2.5rem;
+  padding: 1rem;
+}
+
+/* SIDEBAR */
+.sidebar {
+  grid-row: span 2;
+  background-color: #1e343a;
+  padding: 20rem 5rem 4rem 5rem;
+}
+
+/* MAP */
+#map {
+  height: 100%;
+  background-color: var(--color-light--1);
+}
+
+/* Popup width is defined in JS using options */
+.leaflet-popup .leaflet-popup-content-wrapper {
+  background-color: var(--color-brand--1);
+  color: var(--color-light--2);
+  border-radius: 5px;
+  padding-right: 0.6rem;
+}
+
+.leaflet-popup .leaflet-popup-content {
+  font-size: 1.5rem;
+}
+
+.leaflet-popup .leaflet-popup-tip {
+  background-color: var(--color-brand--1);
+}
