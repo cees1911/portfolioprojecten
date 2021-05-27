@@ -1,25 +1,15 @@
 'use strict';
 
-// navigator.geolocation.getCurrentPosition(
-//   function (position) {
-//     const { latitude } = position.coords;
-//     const { longitude } = position.coords;
-//     console.log(position);
-//   },
-//   function () {
-//     alert('locatie kon niet worden gelezen pas browser aan');
-//   }
+const zoekstring = document.querySelector('.zoekstring');
+const zoekbtn = document.querySelector('.zoek__btn');
 
-//     const beginCoords = [latitude, longitude]);
+const middelCoords = [52.100832, 5.339165];
 
-const middelCoords = [52.100774, 5.646068];
-
+const map = L.map('map', { closePopupOnClick: false }).setView(
+  middelCoords,
+  10
+);
 const renderMap = function (clubs) {
-  const map = L.map('map', { closePopupOnClick: false }).setView(
-    middelCoords,
-    10
-  );
-
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution:
       '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
@@ -38,5 +28,27 @@ const renderMap = function (clubs) {
       .openPopup();
   });
 };
+
+zoekbtn.addEventListener('click', function (e) {
+  e.preventDefault();
+
+  const zoekStr = zoekstring.value;
+  zoekstring.value = '';
+
+  clubsNL.forEach(e => {
+    const vindNaam = e.naam;
+
+    if (vindNaam.toLowerCase().includes(zoekStr.toLowerCase())) {
+      const zoekCoords = e.clubCoords;
+
+      map.setView(zoekCoords, 12, {
+        animate: true,
+        pan: {
+          duration: 2,
+        },
+      });
+    }
+  });
+});
 
 renderMap(clubsNL);

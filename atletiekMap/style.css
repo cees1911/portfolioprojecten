@@ -41,6 +41,7 @@ h2 {
   text-transform: uppercase;
   padding-bottom: 2rem;
   letter-spacing: 0.3rem;
+  text-align: center;
 }
 
 .container {
@@ -91,4 +92,34 @@ a:visited {
 
 .leaflet-popup .leaflet-popup-tip {
   background-color: var(--color-brand--1);
+}
+
+.search__form {
+  background-color: #152529;
+  border-radius: 5px;
+  padding: 1.5rem 2.75rem;
+  margin-bottom: 1.75rem;
+  display: flex;
+}
+
+.zoekstring {
+  width: 100%;
+  padding: 0.3rem 1.1rem;
+  font-family: inherit;
+  font-size: 1.4rem;
+  border: none;
+  border-radius: 3px;
+  background-color: var(--color-light--3);
+  transition: all 0.2s;
+}
+
+.zoekstring:focus {
+  outline: none;
+  background-color: #fff;
+}
+
+.zoek__btn {
+  margin-left: 1rem;
+  border-radius: 8px;
+  padding: 0.5rem;
 }
