@@ -26,21 +26,42 @@
     ></script>
 
     <script defer src="clubs.js"></script>
+    <script defer src="clubbe.js"></script>
     <script defer src="script.js"></script>
     <title>Atletiek Map</title>
   </head>
   <body>
     <div class="container">
       <div class="sidebar">
+        <h2>Kies een land</h2>
+        <div class="container_landkeuze cnt">
+          <input type="radio" name="landkeuze" id="NL" class="input" checked />
+          <label for="NL">Nederland</label>
+        </br>
+          <input type="radio" name="landkeuze" id="BE"  />
+          <label for="BE">Belgie</label>
+        </br>
+        <button class="btn kies__btn">Kies een land</button>
+      </div>
+
         <h2>zoek een club</h2>
-        <form class="search__form">
+        <form class="search__form cnt">
           <input type="text" class="zoekstring" placeholder="club naam" />
-          <button class="zoek__btn">Zoek</button>
+          <button class="zoek__btn btn">Zoek</button>
         </form>
+
+        <div class="container__clubinfo cnt hidden">
+          <h3 class="clubnaam"></h3>
+          <h4>Adres :</h4>
+          <p class="clubstraat"></p>
+          <p class="clubplaats"></p>
+          <h4>Contact :</h4>
+          <p class='clubweb'></p>
+        </div>
       </div>
 
       <div class="header">
-        <h1>Atletiekbanen in Nederland</h1>
+        <h1 class='header__tekst'>Atletiekbanen in Nederland</h1>
       </div>
 
       <div id="map"></div>
